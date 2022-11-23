@@ -1,0 +1,110 @@
+$first-font:'shrikhand';
+$second-font:'roboto';
+
+$primary-color:#9356DC;
+$secondary-color:#FF79DA;
+$tertiary-color:#99E2D0;
+
+$first-background: #f5f5f5;
+
+@mixin position{
+    display: flex;
+    align-items: baseline;
+    justify-content: center;
+}
+
+@mixin button{
+    padding: 15px 20px 15px 20px;
+    margin-top: 10px;
+    border-radius: 50px;
+    border: none;
+    font-family: $second-font;
+    font-size: 15px;
+    font-weight: 500;
+    color: white;
+    background: linear-gradient(to bottom right, $secondary-color, $primary-color);
+    box-shadow: 0px 5px 5px lightgrey;
+}
+
+.logo{
+    font-size: 30px;
+    font-family: $first-font;
+    margin-bottom: 5px;
+}
+.logo, .location{
+    @include position;
+}
+main{
+    font-family: $second-font;
+
+    .location{
+        background-color: #e5e5e5;
+        box-shadow: inset 0px 2px 2px #c5c5c5;
+
+        .city{
+            padding-left: 15px;
+        }
+    }
+    .presentation{
+        background-color: $first-background;
+        padding: 20px 0px 50px 0px;
+
+        .title,.text{
+            text-align: center;
+            padding: 0px 20px 0px 20px;
+        }
+        .text{
+            font-weight: 100;
+            font-size: 18px;
+        }
+    }
+    .container{
+        @include position;
+
+        button{
+            @include button;
+        }
+    }
+    .restaurant{
+        background-color: $first-background;
+        padding: 40px 10px 50px 10px;
+
+        article{
+            height: 2000px;
+
+            .card{
+                width: 100%;
+                display: flex;
+                flex-direction: column;
+                background-color: white;
+                border-radius: 20px;
+                text-decoration: none;
+
+                .image{
+                    width: 100%;
+                    max-height: 180px;
+                    object-fit: cover;
+                    border-radius: 20px 20px 0px 0px;
+                }
+                .restaurant-name{
+                    padding-top: 10px;
+                    display: flex;
+                    justify-content: space-between;
+
+                    h2, .place{
+                        font-size: 20px;
+                        color: black;
+                        margin: 6px 0px 6px 0px;
+                    }
+                    .name{
+                        padding: 0px 0px 10px 10px;
+                    }
+                    .icon{
+                        font-size: 30px;
+                        justify-content: center;
+                    }
+                }
+            }
+        }
+    }
+}
