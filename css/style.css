@@ -1,3 +1,4 @@
+/* Header */
 .logo {
   font-size: 30px;
   font-family: "shrikhand";
@@ -10,9 +11,11 @@
   justify-content: center;
 }
 
-main {
+main, footer {
   font-family: "roboto";
 }
+
+/* Main : Location - Presentation - Tuto - Restaurant */
 main .location {
   background-color: #e5e5e5;
   box-shadow: inset 0px 2px 2px #c5c5c5;
@@ -49,12 +52,59 @@ main .container button {
   background: linear-gradient(to bottom right, #FF79DA, #9356DC);
   box-shadow: 0px 5px 5px lightgrey;
 }
-main .restaurant {
+main .container button:hover {
+  filter: brightness(1.1);
+  box-shadow: 0px 7px 7px darkgrey;
+  cursor: pointer;
+}
+main .tuto .tuto-explaination .tuto-step {
+  display: flex;
+  align-items: baseline;
   background-color: #f5f5f5;
+  height: 70px;
+  border-radius: 20px;
+  margin-bottom: 15px;
+  align-items: center;
+  width: 90%;
+  margin-left: 25px;
+  box-shadow: 5px 5px 10px lightgrey;
+}
+main .tuto .tuto-explaination .tuto-step .number {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  background-color: #9356DC;
+  color: white;
+  font-size: 14px;
+  position: absolute;
+  left: 32px;
+}
+main .tuto .tuto-explaination .tuto-step .fa-sharp.fa-solid {
+  color: #7e7e7e;
+  margin: 0 20px 0 32px;
+  font-size: 16px;
+}
+main .tuto .tuto-explaination .tuto-step .tuto-text {
+  font-size: 16px;
+  font-weight: 600;
+}
+main .tuto .tuto-explaination .tuto-step:hover {
+  background-color: #f5edff;
+}
+main .tuto .tuto-explaination .tuto-step:hover .fa-sharp.fa-solid {
+  color: #9356DC;
+}
+main .tuto, main .restaurant {
   padding: 40px 10px 50px 10px;
 }
+main .restaurant {
+  background-color: #f5f5f5;
+}
 main .restaurant article {
-  height: 2000px;
+  height: 100% px;
 }
 main .restaurant article .card {
   width: 100%;
@@ -63,6 +113,8 @@ main .restaurant article .card {
   background-color: white;
   border-radius: 20px;
   text-decoration: none;
+  margin-bottom: 20px;
+  box-shadow: 5px 5px 10px lightgrey;
 }
 main .restaurant article .card .image {
   width: 100%;
@@ -70,6 +122,17 @@ main .restaurant article .card .image {
   -o-object-fit: cover;
      object-fit: cover;
   border-radius: 20px 20px 0px 0px;
+}
+main .restaurant article .card .new {
+  position: absolute;
+  background-color: #99E2D0;
+  padding: 8px 8px 8px 8px;
+  border-radius: 5px;
+  margin: 11px 0px 0px 250px;
+}
+main .restaurant article .card .new b {
+  color: #99E2D0;
+  filter: brightness(0.5);
 }
 main .restaurant article .card .restaurant-name {
   padding-top: 10px;
@@ -86,4 +149,39 @@ main .restaurant article .card .restaurant-name .name {
 }
 main .restaurant article .card .restaurant-name .icon {
   font-size: 30px;
+  width: 15%;
+  padding-top: 10px;
+}
+main .restaurant article .card .restaurant-name .icon .fa-regular.fa-heart {
+  color: black;
+}
+
+/* Footer */
+footer {
+  background-color: #252629;
+  color: white;
+  padding: 10px 0px 20px 20px;
+}
+footer h3 {
+  font-family: "shrikhand";
+  font-weight: 200;
+  margin-bottom: 10px;
+}
+footer ul {
+  padding-left: 0px;
+  margin-top: 0px;
+  list-style: none;
+}
+footer ul li a {
+  text-decoration: none;
+  color: white;
+  display: flex;
+  align-items: baseline;
+  height: 40px;
+}
+footer ul li .fa-solid.fa-utensils, footer ul li .fa-solid.fa-handshake-angle {
+  width: 8%;
+}
+footer ul li .no-icon {
+  align-items: center;
 }/*# sourceMappingURL=style.css.map */
