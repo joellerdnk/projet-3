@@ -179,8 +179,21 @@ main{
                         margin: 10px 20px 0px 0px;
 
                         .fa-regular.fa-heart{
+                            position: absolute;
+                            z-index: 1;
                             color: black;
-
+                        }
+                        .fa-solid.fa-heart{
+                            position: absolute;
+                            z-index: 2;
+                            opacity: 0;
+                            background: -webkit-gradient(linear, left top, left bottom, from($primary-color), to($secondary-color));
+                            background-clip: text;
+                            color: transparent;
+                            transition: 0.8s;
+                        }
+                        .fa-solid.fa-heart:hover{
+                            opacity: 1;
                         }
                     }
                 }
@@ -191,7 +204,7 @@ main{
 
 /* Footer */
 footer{
-    background-color: #252629;
+    background-color: #353535;
     color: white;
     padding: 10px 0px 20px 20px;
 

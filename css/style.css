@@ -155,12 +155,27 @@ main .restaurant article .card .restaurant-name .icon {
   margin: 10px 20px 0px 0px;
 }
 main .restaurant article .card .restaurant-name .icon .fa-regular.fa-heart {
+  position: absolute;
+  z-index: 1;
   color: black;
+}
+main .restaurant article .card .restaurant-name .icon .fa-solid.fa-heart {
+  position: absolute;
+  z-index: 2;
+  opacity: 0;
+  background: -webkit-gradient(linear, left top, left bottom, from(#9356DC), to(#FF79DA));
+  -webkit-background-clip: text;
+          background-clip: text;
+  color: transparent;
+  transition: 0.8s;
+}
+main .restaurant article .card .restaurant-name .icon .fa-solid.fa-heart:hover {
+  opacity: 1;
 }
 
 /* Footer */
 footer {
-  background-color: #252629;
+  background-color: #353535;
   color: white;
   padding: 10px 0px 20px 20px;
 }
