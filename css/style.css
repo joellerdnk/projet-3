@@ -51,6 +51,7 @@ main .container button {
   color: white;
   background: linear-gradient(to bottom right, #FF79DA, #9356DC);
   box-shadow: 0px 5px 5px lightgrey;
+  transition: 350ms;
 }
 main .container button:hover {
   filter: brightness(1.1);
@@ -148,9 +149,10 @@ main .restaurant article .card .restaurant-name .name {
   padding: 0px 0px 10px 10px;
 }
 main .restaurant article .card .restaurant-name .icon {
-  font-size: 30px;
-  width: 15%;
-  padding-top: 10px;
+  height: 32px;
+  width: 32px;
+  font-size: 32px;
+  margin: 10px 20px 0px 0px;
 }
 main .restaurant article .card .restaurant-name .icon .fa-regular.fa-heart {
   color: black;
