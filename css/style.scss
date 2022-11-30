@@ -34,6 +34,9 @@ $first-background: #f5f5f5;
     object-fit: cover;
     border-radius: 20px 20px 0px 0px;
 }
+body{
+    margin: 0px;
+}
 /* Header */
 .logo{
     font-size: 30px;
@@ -110,7 +113,7 @@ main{
                 color: white;
                 font-size: 14px;
                 position: absolute;
-                left: 32px; 
+                left: 28px; 
             }
             .fa-sharp.fa-solid{
                 color: #7e7e7e;
@@ -138,7 +141,7 @@ main{
         background-color: $first-background;
 
         article{
-            height: 100%px;
+            height: 100%;
 
             .card{
                 width: 100%;

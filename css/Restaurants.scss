@@ -1,0 +1,192 @@
+$first-font:'shrikhand';
+$second-font:'roboto';
+
+$primary-color:#9356DC;
+$secondary-color:#FF79DA;
+$tertiary-color:#99E2D0;
+
+$first-background: #f5f5f5;
+
+@mixin position{
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+}
+
+@mixin button{
+    padding: 15px 20px 15px 20px;
+    margin-top: 10px;
+    border-radius: 50px;
+    border: none;
+    font-family: $second-font;
+    font-size: 15px;
+    font-weight: 500;
+    color: white;
+    background: linear-gradient(to bottom right, $secondary-color, $primary-color);
+    box-shadow: 0px 5px 5px lightgrey;
+}
+body{
+    margin: 0px;
+}
+
+/* Header */
+header{
+    @include position;
+    width: 72%;
+    
+    .logo{
+        font-size: 30px;
+        font-family: $first-font;
+        margin-bottom: 5px;
+    }
+    .icon{
+        font-size: 20px;
+        color: #353535;
+        padding: 20px;
+    }
+}
+
+main, footer{
+    font-family: $second-font;
+}
+article{
+    position: relative;
+    z-index: 1;
+    height: 200px;
+
+    .image{
+        width: 100%;
+    }
+}
+/* Menu */
+main{
+    position: relative;
+    z-index: 2;
+    border-radius: 35px 35px 0px 0px;
+    background-color: $first-background;
+    padding: 15px 0px 0px 15px;
+    height: 1200px;
+    
+    .title-heart{
+        @include position;
+
+        h1{
+            font-family: $first-font;
+            font-size: 25px;
+            font-weight: 400;
+        }
+        .icon{
+            height: 32px;
+            width: 32px;
+            font-size: 32px;
+            margin: 15px 20px 0px 0px;
+
+            .fa-regular.fa-heart{
+                position: absolute;
+                z-index: 1;
+                color: black;
+            }
+            .fa-solid.fa-heart{
+                position: absolute;
+                z-index: 2;
+                opacity: 0;
+                background: -webkit-gradient(linear, left top, left bottom, from($primary-color), to($secondary-color));
+                background-clip: text;
+                color: transparent;
+                transition: 0.8s;
+            }
+            .fa-solid.fa-heart:hover{
+                opacity: 1;
+            }
+        }   
+    }
+    .menu{
+        padding-bottom: 30px;
+        height: 25%;
+
+        h2{
+            font-size: 18px;
+            font-weight: 400;
+        }
+        .dish{
+            background-color: white;
+            border-radius: 20px;
+            box-shadow: 5px 5px 10px lightgrey;
+            padding: 10px 16px 10px 16px;
+            margin-bottom: 18px;
+
+            h3{
+                font-size: 16px;
+                margin: 4px 0px 6px 0px;
+            }
+
+            .text-price{
+                @include position;
+
+                p{
+                    font-weight: 200;
+                    font-size: 16px;
+                    margin: 0px 0px 4px 0px;
+                    overflow: hidden;
+                    text-overflow: ellipsis;
+                    white-space: nowrap;
+                }
+            }  
+        }
+    }
+
+    .container{
+        @include position;
+        justify-content: center;
+
+        button{
+            @include button;
+            transition: 350ms;
+        }
+        button:hover{
+            filter: brightness(1.1);
+            box-shadow: 0px 7px 7px darkgrey;
+            cursor: pointer;
+        }
+    }
+}
+
+/* Footer */
+footer{
+    background-color: #353535;
+    color: white;
+    padding: 10px 0px 20px 20px;
+
+    h3{
+        font-family: "shrikhand";
+        font-weight: 200;
+        margin-bottom: 10px;
+    }
+    ul{
+        padding-left: 0px;
+        margin-top: 0px;
+        list-style: none;
+
+        li{
+            a{
+                text-decoration: none;
+                color: white;
+                display: flex;
+                align-items: baseline;
+                height: 40px;
+            }
+
+            .fa-solid.fa-utensils{
+                font-size: 16px;
+                margin-right: 10px;
+            }
+            .fa-solid.fa-handshake-angle{
+                font-size: 12px;
+                margin-right: 10px;
+            }
+            .no-icon{
+                align-items: center; 
+            }
+        }
+    }
+}

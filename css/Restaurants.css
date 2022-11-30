@@ -1,0 +1,169 @@
+body {
+  margin: 0px;
+}
+
+/* Header */
+header {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  width: 72%;
+}
+header .logo {
+  font-size: 30px;
+  font-family: "shrikhand";
+  margin-bottom: 5px;
+}
+header .icon {
+  font-size: 20px;
+  color: #353535;
+  padding: 20px;
+}
+
+main, footer {
+  font-family: "roboto";
+}
+
+article {
+  position: relative;
+  z-index: 1;
+  height: 200px;
+}
+article .image {
+  width: 100%;
+}
+
+/* Menu */
+main {
+  position: relative;
+  z-index: 2;
+  border-radius: 35px 35px 0px 0px;
+  background-color: #f5f5f5;
+  padding: 15px 0px 0px 15px;
+  height: 1200px;
+}
+main .title-heart {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+}
+main .title-heart h1 {
+  font-family: "shrikhand";
+  font-size: 25px;
+  font-weight: 400;
+}
+main .title-heart .icon {
+  height: 32px;
+  width: 32px;
+  font-size: 32px;
+  margin: 15px 20px 0px 0px;
+}
+main .title-heart .icon .fa-regular.fa-heart {
+  position: absolute;
+  z-index: 1;
+  color: black;
+}
+main .title-heart .icon .fa-solid.fa-heart {
+  position: absolute;
+  z-index: 2;
+  opacity: 0;
+  background: -webkit-gradient(linear, left top, left bottom, from(#9356DC), to(#FF79DA));
+  -webkit-background-clip: text;
+          background-clip: text;
+  color: transparent;
+  transition: 0.8s;
+}
+main .title-heart .icon .fa-solid.fa-heart:hover {
+  opacity: 1;
+}
+main .menu {
+  padding-bottom: 30px;
+  height: 25%;
+}
+main .menu h2 {
+  font-size: 18px;
+  font-weight: 400;
+}
+main .menu .dish {
+  background-color: white;
+  border-radius: 20px;
+  box-shadow: 5px 5px 10px lightgrey;
+  padding: 10px 16px 10px 16px;
+  margin-bottom: 18px;
+}
+main .menu .dish h3 {
+  font-size: 16px;
+  margin: 4px 0px 6px 0px;
+}
+main .menu .dish .text-price {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+}
+main .menu .dish .text-price p {
+  font-weight: 200;
+  font-size: 16px;
+  margin: 0px 0px 4px 0px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+main .container {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  justify-content: center;
+}
+main .container button {
+  padding: 15px 20px 15px 20px;
+  margin-top: 10px;
+  border-radius: 50px;
+  border: none;
+  font-family: "roboto";
+  font-size: 15px;
+  font-weight: 500;
+  color: white;
+  background: linear-gradient(to bottom right, #FF79DA, #9356DC);
+  box-shadow: 0px 5px 5px lightgrey;
+  transition: 350ms;
+}
+main .container button:hover {
+  filter: brightness(1.1);
+  box-shadow: 0px 7px 7px darkgrey;
+  cursor: pointer;
+}
+
+/* Footer */
+footer {
+  background-color: #353535;
+  color: white;
+  padding: 10px 0px 20px 20px;
+}
+footer h3 {
+  font-family: "shrikhand";
+  font-weight: 200;
+  margin-bottom: 10px;
+}
+footer ul {
+  padding-left: 0px;
+  margin-top: 0px;
+  list-style: none;
+}
+footer ul li a {
+  text-decoration: none;
+  color: white;
+  display: flex;
+  align-items: baseline;
+  height: 40px;
+}
+footer ul li .fa-solid.fa-utensils {
+  font-size: 16px;
+  margin-right: 10px;
+}
+footer ul li .fa-solid.fa-handshake-angle {
+  font-size: 12px;
+  margin-right: 10px;
+}
+footer ul li .no-icon {
+  align-items: center;
+}/*# sourceMappingURL=Restaurants.css.map */
