@@ -89,7 +89,7 @@ main .menu .dish {
   border-radius: 20px;
   box-shadow: 5px 5px 10px lightgrey;
   padding: 10px 16px 10px 16px;
-  margin-bottom: 18px;
+  margin: 0px 18px 18px 0px;
 }
 main .menu .dish h3 {
   font-size: 16px;
