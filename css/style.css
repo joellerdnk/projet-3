@@ -117,23 +117,39 @@ main .restaurant article .card {
   margin-bottom: 20px;
   box-shadow: 5px 5px 10px lightgrey;
 }
-main .restaurant article .card .image {
+main .restaurant article .card .image-new {
+  display: flex;
+  justify-content: end;
+}
+main .restaurant article .card .image-new .image {
+  position: relative;
+  z-index: 1;
   width: 100%;
   max-height: 180px;
   -o-object-fit: cover;
      object-fit: cover;
   border-radius: 20px 20px 0px 0px;
 }
-main .restaurant article .card .new {
+main .restaurant article .card .image-new .new {
   position: absolute;
+  z-index: 2;
   background-color: #99E2D0;
   padding: 8px 8px 8px 8px;
   border-radius: 5px;
-  margin: 11px 0px 0px 250px;
+  margin: 10px 10px 0px 0px;
 }
-main .restaurant article .card .new b {
+main .restaurant article .card .image-new .new b {
   color: #99E2D0;
   filter: brightness(0.5);
+}
+main .restaurant article .card .image {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  max-height: 180px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 20px 20px 0px 0px;
 }
 main .restaurant article .card .restaurant-name {
   padding-top: 10px;
@@ -196,9 +212,43 @@ footer ul li a {
   align-items: baseline;
   height: 40px;
 }
-footer ul li .fa-solid.fa-utensils, footer ul li .fa-solid.fa-handshake-angle {
-  width: 8%;
+footer ul li .fa-solid.fa-utensils {
+  font-size: 16px;
+  margin-right: 10px;
+}
+footer ul li .fa-solid.fa-handshake-angle {
+  font-size: 12px;
+  margin-right: 10px;
 }
 footer ul li .no-icon {
   align-items: center;
+}
+
+@media screen and (min-width: 768px) {
+  main .tuto .tuto-explaination {
+    display: flex;
+  }
+  main .tuto .tuto-explaination .tuto-step {
+    position: relative;
+  }
+  main .tuto .tuto-explaination .tuto-step .number {
+    z-index: 2;
+    left: -12px;
+  }
+  main .tuto .tuto-explaination .tuto-step .tuto-text {
+    font-size: 14px;
+  }
+  main .restaurant article {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
+  main .restaurant article .card {
+    width: 45%;
+  }
+}
+@media screen and (min-width: 992px) {
+  main .tuto .tuto-explaination .tuto-step .tuto-text {
+    font-size: 18px;
+  }
 }/*# sourceMappingURL=style.css.map */
