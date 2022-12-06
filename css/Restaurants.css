@@ -1,17 +1,21 @@
 @-webkit-keyframes slidein {
   from {
-    scale: 0;
+    transform: translateY(20px);
+    opacity: 0;
   }
   to {
-    scale: 1;
+    transform: translateY(0);
+    opacity: 1;
   }
 }
 @keyframes slidein {
   from {
-    scale: 0;
+    transform: translateY(20px);
+    opacity: 0;
   }
   to {
-    scale: 1;
+    transform: translateY(0);
+    opacity: 1;
   }
 }
 body {
@@ -123,8 +127,8 @@ main .menu .dish {
   display: flex;
   cursor: pointer;
   overflow: hidden;
-  -webkit-animation: slidein 0.8s;
-          animation: slidein 0.8s;
+  -webkit-animation: slidein 1.5s;
+          animation: slidein 1.5s;
 }
 main .menu .dish .dish-name {
   padding: 6px 0px 6px 14px;
